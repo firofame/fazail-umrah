@@ -2,6 +2,13 @@
 
 A dedicated, comprehensive dataset and interactive local web application showcasing the **Prophetic Virtues and Merits of 'Umrah (Minor Pilgrimage)**, scraped directly from [Sunnah.com](https://sunnah.com).
 
+**Live website:** [https://firofame.github.io/fazail-umrah/](https://firofame.github.io/fazail-umrah/)
+
+GitHub Pages serves the repository root from the `main` branch. The
+`.nojekyll` file keeps the site as plain static files. Pushed updates to
+`main` are deployed automatically; rebuild `index.html` before pushing
+changes to the dataset.
+
 ---
 
 ## 🌟 Key Features
