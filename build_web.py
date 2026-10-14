@@ -4,6 +4,8 @@ Generates the modern local web viewer for Fazail of Umrah.
 """
 import json
 import os
+from html import escape
+from pathlib import Path
 
 def build():
     dir_path = os.path.dirname(os.path.abspath(__file__))
@@ -14,6 +16,56 @@ def build():
         hadiths = json.load(f)
 
     json_str = json.dumps(hadiths, ensure_ascii=False)
+    num_categories = len(set(h["category"] for h in hadiths))
+    num_collections = len(set(h["collection"] for h in hadiths))
+    audio_dir = Path(dir_path) / "audio"
+    audio_manifest_path = audio_dir / "malayalam_manifest.json"
+    audio_section = ""
+    if audio_manifest_path.exists():
+        audio_manifest = json.loads(audio_manifest_path.read_text(encoding="utf-8"))
+        chapter_players = []
+        for chapter in audio_manifest["chapters"]:
+            stem = chapter["stem"]
+            for suffix in (".mp3", ".ogg"):
+                if not (audio_dir / f"{stem}{suffix}").is_file():
+                    raise FileNotFoundError(f"Missing chapter audio: {stem}{suffix}")
+            title = chapter.get("title")
+            if not title:
+                title = (Path(dir_path) / "data/tts" / f"{stem}.txt").read_text(
+                    encoding="utf-8"
+                ).splitlines()[0]
+            chapter_players.append(f"""
+          <li class="py-3">
+            <p class="text-sm mb-2" lang="ml">{escape(title)}</p>
+            <audio controls preload="none" class="w-full" aria-label="{escape(title)}">
+              <source src="audio/{escape(stem)}.ogg" type="audio/ogg; codecs=opus">
+              <source src="audio/{escape(stem)}.mp3" type="audio/mpeg">
+              <a href="audio/{escape(stem)}.mp3">Download chapter MP3</a>
+            </audio>
+          </li>""")
+        full_stem = "fazail_umrah_malayalam_full"
+        for suffix in (".mp3", ".ogg"):
+            if not (audio_dir / f"{full_stem}{suffix}").is_file():
+                raise FileNotFoundError(f"Missing full Malayalam audio: {suffix}")
+        audio_section = f"""
+    <section class="mb-8 p-5 rounded-2xl bg-slate-900 border border-emerald-900/50" aria-labelledby="malayalamAudioHeading">
+      <h2 id="malayalamAudioHeading" class="text-lg font-semibold text-emerald-300">Malayalam Narration</h2>
+      <p class="text-sm text-slate-400 mt-2 mb-4">Reviewed thematic meaning-summary, not a full translation or Arabic recitation. Weak/disputed reports are qualified and unverified claims are not used as evidence. Dataset labels may differ from reviewed narration.</p>
+      <audio id="malayalamFullAudio" controls preload="none" class="w-full" aria-label="Full Malayalam narration">
+        <source src="audio/{full_stem}.ogg" type="audio/ogg; codecs=opus">
+        <source src="audio/{full_stem}.mp3" type="audio/mpeg">
+        <a href="audio/{full_stem}.mp3">Download full MP3</a>
+      </audio>
+      <div class="flex gap-4 text-sm mt-3">
+        <a href="audio/{full_stem}.mp3" download class="text-emerald-400 hover:underline">Download MP3</a>
+        <a href="audio/{full_stem}.ogg" download class="text-emerald-400 hover:underline">Download Opus</a>
+      </div>
+      <details class="mt-4">
+        <summary class="cursor-pointer text-sm text-emerald-300">Listen by chapter ({len(chapter_players)})</summary>
+        <ol class="divide-y divide-slate-800">{"".join(chapter_players)}</ol>
+      </details>
+    </section>
+"""
 
     html_template = f"""<!DOCTYPE html>
 <html lang="en" class="dark">
@@ -129,11 +181,11 @@ def build():
         <span class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-1">Ahadith Compiled</span>
       </div>
       <div class="p-4 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/80 border border-slate-800 flex flex-col">
-        <span class="text-2xl font-bold text-amber-400">8</span>
+        <span class="text-2xl font-bold text-amber-400">{num_categories}</span>
         <span class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-1">Thematic Virtues</span>
       </div>
       <div class="p-4 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/80 border border-slate-800 flex flex-col">
-        <span class="text-2xl font-bold text-sky-400">9</span>
+        <span class="text-2xl font-bold text-sky-400">{num_collections}</span>
         <span class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-1">Major Collections</span>
       </div>
       <div class="p-4 rounded-2xl bg-gradient-to-br from-slate-900 to-slate-900/80 border border-slate-800 flex flex-col">
@@ -141,6 +193,8 @@ def build():
         <span class="text-xs text-slate-400 uppercase tracking-wider font-medium mt-1">Showing Now</span>
       </div>
     </div>
+
+{audio_section}
 
     <!-- Category Filter Tabs -->
     <div class="mb-6">

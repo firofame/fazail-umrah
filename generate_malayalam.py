@@ -30,8 +30,29 @@ CHAPTER_SOURCES = {
     "06_reward_by_hardship": ["bukhari:1787", "ibnmajah:3000"],
     "07_virtues_of_tawaf": ["tirmidhi:959", "nasai:2919"],
     "08_supplication_return": ["bukhari:1797", "muslim:1342"],
+    "10_talbiyah": ["ibnmajah:2921", "tirmidhi:828"],
+    "11_resurrection_in_ihram": [
+        "bukhari:1265", "muslim:1206a", "sahih-targhib:1114",
+    ],
+    "12_pilgrim_supplication": [
+        "tirmidhi:3562", "abudawud:1498", "riyadussalihin:713",
+    ],
+    "13_shaving_head": ["bukhari:1727", "bukhari:1728", "muslim:1301"],
+    "14_tawaf_and_sai": ["ibnmajah:2956", "tabarani:1112"],
+    "15_aqsa_ihram_review": ["abudawud:1741", "ibnmajah:3001"],
+    "16_black_stone": ["tirmidhi:877", "tirmidhi:961", "ibnmajah:2944"],
+    "17_zamzam": ["ibnmajah:3062", "muslim:2473"],
+    "18_sacred_mosque_prayer": ["ibnmajah:1406"],
+    "19_prophets_umrahs": ["bukhari:1778", "muslim:1253a"],
+    "20_pilgrimage_spending_review": ["ahmad:23000"],
+    "21_equivalent_deeds": [
+        "ibnmajah:1412", "tirmidhi:324", "tirmidhi:586",
+        "abudawud:558", "tabarani:7473",
+    ],
+    # Keep the existing conclusion filename but play it after the new chapters.
     "09_conclusion": [],
 }
+REVIEW_PATH = ROOT / "data/tts/new_hadith_review.json"
 
 
 def sha256(path: Path) -> str:
@@ -69,6 +90,16 @@ def probe_audio(path: Path, codec: str) -> dict:
 
 
 async def render_chapters(tts, texts: dict[str, str], output_dir: Path) -> None:
+    pending = {}
+    for stem, text in texts.items():
+        output = output_dir / f"{stem}.mp3"
+        if output.exists():
+            probe_audio(output, "mp3")
+            print(f"Resuming verified cached chapter: {stem}", flush=True)
+        else:
+            pending[stem] = text
+    if not pending:
+        return
     tts.CONFIG["headless"] = True
     credentials = tts.get_google_credentials()
     doc_id = tts.get_doc_id(tts.CONFIG["doc_url"])
@@ -82,12 +113,8 @@ async def render_chapters(tts, texts: dict[str, str], output_dir: Path) -> None:
         )
         try:
             page = await tts.open_tts_page(context)
-            for stem, text in texts.items():
+            for stem, text in pending.items():
                 output = output_dir / f"{stem}.mp3"
-                if output.exists():
-                    probe_audio(output, "mp3")
-                    print(f"Resuming verified cached chapter: {stem}", flush=True)
-                    continue
                 print(f"Generating Malayalam chapter: {stem}", flush=True)
                 # Each chapter is validated below the Google Docs limit.
                 await tts.process_chunk(page, credentials, doc_id, text, output)
@@ -97,11 +124,42 @@ async def render_chapters(tts, texts: dict[str, str], output_dir: Path) -> None:
             await context.close()
 
 
+def reuse_verified_chapters(
+    chapters: list[dict], audio_dir: Path, cache_dir: Path,
+) -> None:
+    manifest_path = audio_dir / "malayalam_manifest.json"
+    if not manifest_path.exists():
+        raise FileNotFoundError(
+            "--reuse-verified requires an existing Malayalam audio manifest"
+        )
+    previous = json.loads(manifest_path.read_text(encoding="utf-8"))
+    published = {chapter["stem"]: chapter for chapter in previous["chapters"]}
+    for chapter in chapters:
+        stem = chapter["stem"]
+        old = published.get(stem)
+        if old is None or old["text_sha256"] != chapter["text_sha256"]:
+            continue
+        mp3 = audio_dir / f"{stem}.mp3"
+        if sha256(mp3) != old["audio"]["mp3"]["sha256"]:
+            raise RuntimeError(f"Published audio checksum mismatch: {mp3}")
+        probe_audio(mp3, "mp3")
+        shutil.copyfile(mp3, cache_dir / mp3.name)
+        chapter["generation"] = {
+            "method": "reused_verified",
+            "previous_render_sha256": previous["render_sha256"],
+        }
+        print(f"Reusing unchanged, checksum-verified recording: {stem}", flush=True)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--validate-only", action="store_true",
         help="Validate script and source references without contacting Google.",
+    )
+    parser.add_argument(
+        "--reuse-verified", action="store_true",
+        help="Reuse published MP3s only when script and manifest audio hashes match.",
     )
     args = parser.parse_args()
     sys.path.insert(0, str(TRANSCRIBE_PROJECT))
@@ -111,6 +169,24 @@ def main() -> None:
         record["id"]: record
         for record in json.loads((ROOT / "data/fazail_umrah.json").read_text())
     }
+    reviews = json.loads(REVIEW_PATH.read_text(encoding="utf-8"))["records"]
+    new_source_ids = {
+        source_id
+        for stem, source_ids in CHAPTER_SOURCES.items()
+        if int(stem.split("_", 1)[0]) >= 10
+        for source_id in source_ids
+    }
+    if set(reviews) != new_source_ids:
+        raise ValueError("New hadith review must cover every new chapter source exactly")
+    for source_id, review in reviews.items():
+        if review["usage"] not in {
+            "meaning_summary", "qualified_report", "excluded_unverified",
+        }:
+            raise ValueError(f"Unknown narration usage: {source_id}")
+        if review["usage"] != "excluded_unverified" and not (
+            review.get("url_verified") and review.get("grade_verified")
+        ):
+            raise ValueError(f"Missing reviewed source or grade: {source_id}")
     texts = {}
     chapters = []
     for stem, source_ids in CHAPTER_SOURCES.items():
@@ -125,12 +201,14 @@ def main() -> None:
                 "reference": hadiths[source_id]["reference"],
                 "grade_as_stored": hadiths[source_id]["grade"],
                 "url": hadiths[source_id]["sunnah_url"],
+                **reviews.get(source_id, {}),
             }
             for source_id in source_ids
         ]
         texts[stem] = text
         chapters.append({
             "stem": stem,
+            "title": text.splitlines()[0],
             "text_sha256": sha256(path),
             "characters": len(text),
             "validation_issues": issues,
@@ -141,7 +219,10 @@ def main() -> None:
     full_path = ROOT / "data/tts" / f"{FULL_STEM}.txt"
     full_path.write_text(full_text, encoding="utf-8")
     if args.validate_only:
-        print("All ten chapters passed Malayalam TTS checks. No API calls made.")
+        print(
+            f"All {len(chapters)} chapters and {len(reviews)} new source reviews "
+            "passed Malayalam TTS checks. No API calls made."
+        )
         return
 
     sys.path.insert(0, str(TTS_PROJECT))
@@ -154,6 +235,10 @@ def main() -> None:
     audio_dir = ROOT / "audio"
     cache_dir = audio_dir / ".malayalam-cache" / render_hash
     cache_dir.mkdir(parents=True, exist_ok=True)
+    for chapter in chapters:
+        chapter["generation"] = {"method": "google_docs_tts"}
+    if args.reuse_verified:
+        reuse_verified_chapters(chapters, audio_dir, cache_dir)
     previous_directory = Path.cwd()
     # The sibling tool resolves its credentials relative to its project.
     os.chdir(TTS_PROJECT)
@@ -174,6 +259,11 @@ def main() -> None:
                 "mp3": probe_audio(mp3, "mp3"),
                 "ogg": probe_audio(ogg, "opus"),
             }
+            if abs(
+                chapter["audio"]["mp3"]["duration_seconds"]
+                - chapter["audio"]["ogg"]["duration_seconds"]
+            ) > 0.1:
+                raise RuntimeError(f"Chapter MP3 and Opus durations differ: {stem}")
             shutil.copyfile(mp3, staged / mp3.name)
         full_mp3 = staged / f"{FULL_STEM}.mp3"
         if not tts.concatenate_audio_chunks(
@@ -200,12 +290,21 @@ def main() -> None:
         manifest = {
             "generated_at": datetime.now(timezone.utc).isoformat(),
             "language": "ml",
-            "scope": "Reviewed thematic meaning-summary, not all 37 full hadiths",
+            "scope": (
+                f"Reviewed thematic meaning-summary of 20 topics from "
+                f"{len(hadiths)} records, not full translations of every record. "
+                "Qualified weak/disputed reports and excluded claims are "
+                "explicitly distinguished from accepted evidence."
+            ),
             "quality_boundary": (
                 "Source/script and media checks passed; pronunciation has not "
                 "been independently checked by a Malayalam listener or ASR."
             ),
             "dataset_sha256": sha256(ROOT / "data/fazail_umrah.json"),
+            "source_review_sha256": sha256(REVIEW_PATH),
+            "source_review_checked_on": json.loads(
+                REVIEW_PATH.read_text(encoding="utf-8")
+            )["checked_on"],
             "render_sha256": render_hash,
             "full_text_sha256": sha256(full_path),
             "chapters": chapters,
@@ -226,7 +325,7 @@ def main() -> None:
         shutil.rmtree(debug_dir)
     cache_dir.rmdir()
     print(
-        f"Saved ten chapters and full MP3/Opus recording "
+        f"Saved {len(chapters)} chapters and full MP3/Opus recording "
         f"({full_audio['mp3']['duration_seconds']:.2f} seconds) to {audio_dir}",
         flush=True,
     )

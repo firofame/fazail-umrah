@@ -213,6 +213,153 @@ HADITH_ENTRIES = [
         "category": "Supplication and Blessed Return from Umrah",
         "category_arabic": "دعاء وفضل الرجوع من العمرة",
         "url_path": "/muslim:1342"
+    },
+
+    # Category 9: Universal Chorus of the Talbiyah (Cosmic Resonance with Rocks and Trees)
+    {
+        "category": "Universal Chorus of the Talbiyah (Cosmic Resonance with Rocks and Trees)",
+        "category_arabic": "عظيم فضل التلبية ومشاركة الكائنات من حجر وشجر",
+        "url_path": "/ibnmajah:2921"
+    },
+    {
+        "category": "Universal Chorus of the Talbiyah (Cosmic Resonance with Rocks and Trees)",
+        "category_arabic": "عظيم فضل التلبية ومشاركة الكائنات من حجر وشجر",
+        "url_path": "/tirmidhi:828"
+    },
+
+    # Category 10: Perpetual Reward for One Who Dies on Umrah or in Ihram
+    {
+        "category": "Perpetual Reward for One Who Dies on Umrah or in Ihram",
+        "category_arabic": "ثواب من مات معتمراً أو في حال الإحرام يبعث ملبياً",
+        "url_path": "/bukhari:1265"
+    },
+    {
+        "category": "Perpetual Reward for One Who Dies on Umrah or in Ihram",
+        "category_arabic": "ثواب من مات معتمراً أو في حال الإحرام يبعث ملبياً",
+        "url_path": "/muslim:1206a"
+    },
+
+    # Category 11: Seeking the Supplication of the Umrah Pilgrim
+    {
+        "category": "Seeking the Supplication of the Umrah Pilgrim",
+        "category_arabic": "طلب الدعاء من المعتمر واستجابة دعائه",
+        "url_path": "/tirmidhi:3562"
+    },
+    {
+        "category": "Seeking the Supplication of the Umrah Pilgrim",
+        "category_arabic": "طلب الدعاء من المعتمر واستجابة دعائه",
+        "url_path": "/abudawud:1498"
+    },
+    {
+        "category": "Seeking the Supplication of the Umrah Pilgrim",
+        "category_arabic": "طلب الدعاء من المعتمر واستجابة دعائه",
+        "url_path": "/riyadussalihin:713"
+    },
+
+    # Category 12: Threefold Mercy & Supplication for Shaving the Head (Halq)
+    {
+        "category": "Threefold Mercy & Supplication for Shaving the Head (Halq)",
+        "category_arabic": "فضل الحلق والتقصير وتثليث الرحمة للمحلقين",
+        "url_path": "/bukhari:1727"
+    },
+    {
+        "category": "Threefold Mercy & Supplication for Shaving the Head (Halq)",
+        "category_arabic": "فضل الحلق والتقصير وتثليث الرحمة للمحلقين",
+        "url_path": "/bukhari:1728"
+    },
+    {
+        "category": "Threefold Mercy & Supplication for Shaving the Head (Halq)",
+        "category_arabic": "فضل الحلق والتقصير وتثليث الرحمة للمحلقين",
+        "url_path": "/muslim:1301"
+    },
+
+    # Category 13: Virtues of Sa'i & Counting Tawaf Circuits as Freeing Slaves
+    {
+        "category": "Virtues of Sa'i & Counting Tawaf Circuits as Freeing Slaves",
+        "category_arabic": "فضل السعي بين الصفا والمروة وإحصاء الطواف كعتق الرقاب",
+        "url_path": "/ibnmajah:2956"
+    },
+
+    # Category 14: Entering Ihram from Masjid al-Aqsa to the Sacred Mosque
+    {
+        "category": "Entering Ihram from Masjid al-Aqsa to the Sacred Mosque",
+        "category_arabic": "الإهلال بالعمرة من المسجد الأقصى ومغفرة الذنوب",
+        "url_path": "/abudawud:1741"
+    },
+    {
+        "category": "Entering Ihram from Masjid al-Aqsa to the Sacred Mosque",
+        "category_arabic": "الإهلال بالعمرة من المسجد الأقصى ومغفرة الذنوب",
+        "url_path": "/ibnmajah:3001"
+    },
+
+    # Category 15: Heavenly Origin and Day of Resurrection Testimony of the Black Stone
+    {
+        "category": "Heavenly Origin and Day of Resurrection Testimony of the Black Stone",
+        "category_arabic": "أصل الحجر الأسود من الجنة وشهادته لمن استلمه يوم القيامة",
+        "url_path": "/tirmidhi:877"
+    },
+    {
+        "category": "Heavenly Origin and Day of Resurrection Testimony of the Black Stone",
+        "category_arabic": "أصل الحجر الأسود من الجنة وشهادته لمن استلمه يوم القيامة",
+        "url_path": "/tirmidhi:961"
+    },
+    {
+        "category": "Heavenly Origin and Day of Resurrection Testimony of the Black Stone",
+        "category_arabic": "أصل الحجر الأسود من الجنة وشهادته لمن استلمه يوم القيامة",
+        "url_path": "/ibnmajah:2944"
+    },
+
+    # Category 16: Miracle, Nourishment & Cure of Zamzam Water
+    {
+        "category": "Miracle, Nourishment & Cure of Zamzam Water",
+        "category_arabic": "بركة ماء زمزم والشرب بنية الاستجابة والشفاء",
+        "url_path": "/ibnmajah:3062"
+    },
+    {
+        "category": "Miracle, Nourishment & Cure of Zamzam Water",
+        "category_arabic": "بركة ماء زمزم والشرب بنية الاستجابة والشفاء",
+        "url_path": "/muslim:2473"
+    },
+
+    # Category 17: 100,000x Multiplied Prayer in Masjid al-Haram during Umrah
+    {
+        "category": "100,000x Multiplied Prayer in Masjid al-Haram during Umrah",
+        "category_arabic": "مضاعفة الصلاة في المسجد الحرام بمائة ألف صلاة",
+        "url_path": "/ibnmajah:1406"
+    },
+
+    # Category 18: The Prophet's Sunnah of Four Umrahs in Dhu al-Qa'dah
+    {
+        "category": "The Prophet's Sunnah of Four Umrahs in Dhu al-Qa'dah",
+        "category_arabic": "سنة النبي ﷺ في أداء العمرة في ذي القعدة",
+        "url_path": "/bukhari:1778"
+    },
+    {
+        "category": "The Prophet's Sunnah of Four Umrahs in Dhu al-Qa'dah",
+        "category_arabic": "سنة النبي ﷺ في أداء العمرة في ذي القعدة",
+        "url_path": "/muslim:1253a"
+    },
+
+    # Category 19: Deeds Equivalent to the Complete Reward of Umrah (Without Travel)
+    {
+        "category": "Deeds Equivalent to the Complete Reward of Umrah (Without Travel)",
+        "category_arabic": "أعمال صالحة تعدل أجر حجة وعمرة تامة دون سفر",
+        "url_path": "/ibnmajah:1412"
+    },
+    {
+        "category": "Deeds Equivalent to the Complete Reward of Umrah (Without Travel)",
+        "category_arabic": "أعمال صالحة تعدل أجر حجة وعمرة تامة دون سفر",
+        "url_path": "/tirmidhi:324"
+    },
+    {
+        "category": "Deeds Equivalent to the Complete Reward of Umrah (Without Travel)",
+        "category_arabic": "أعمال صالحة تعدل أجر حجة وعمرة تامة دون سفر",
+        "url_path": "/tirmidhi:586"
+    },
+    {
+        "category": "Deeds Equivalent to the Complete Reward of Umrah (Without Travel)",
+        "category_arabic": "أعمال صالحة تعدل أجر حجة وعمرة تامة دون سفر",
+        "url_path": "/abudawud:558"
     }
 ]
 

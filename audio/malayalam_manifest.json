@@ -1,31 +1,37 @@
 {
-  "generated_at": "2026-10-12T13:42:09.101115+00:00",
+  "generated_at": "2026-10-14T11:11:16.433356+00:00",
   "language": "ml",
-  "scope": "Reviewed thematic meaning-summary, not all 37 full hadiths",
+  "scope": "Reviewed thematic meaning-summary of 20 topics from 66 records, not full translations of every record. Qualified weak/disputed reports and excluded claims are explicitly distinguished from accepted evidence.",
   "quality_boundary": "Source/script and media checks passed; pronunciation has not been independently checked by a Malayalam listener or ASR.",
-  "dataset_sha256": "a0f8f1309c10c8a4c3c2065eaf57302c43c6aa2ab25116d0d74846b63a5f1ace",
-  "render_sha256": "7667dba690fa42c538aad1551beeca50c5d826a8cb14791372a7fa30cd109cb5",
-  "full_text_sha256": "f9955ade10e38bd8722b8c398ad50423cbed5bed0c26b736ab869818ad6c9a33",
+  "dataset_sha256": "c7db4c79a5f470e02ce0b0c0dc1affbb715c57d46b92a4ae30a4fa6776571bf7",
+  "source_review_sha256": "e3d6df54eb0d6c469d81fadedcf7fe3eaf8592a5799e1ff8922414b67ee7740b",
+  "source_review_checked_on": "2026-10-14",
+  "render_sha256": "bb0081687a12cbf7b4edfabad214d61bd2a01ebd3e248f621c48dc1d498d1665",
+  "full_text_sha256": "fb33c88958ef01dfa5eeac402feba22eacf0fbfd6753a895cf5b53b672610d54",
   "chapters": [
     {
       "stem": "00_intro",
-      "text_sha256": "53d284a1fdc4abb53cc388595a0c7751d625476354bc37efda40f9bcdeef5a07",
-      "characters": 582,
+      "title": "ബിസ്മില്ലാഹിർ റഹ്‌മാനിർ റഹീം.",
+      "text_sha256": "9de089dd0e0dfaf6d12940b968cfe2116d92e2d86e0ea3625c9162ee72dcf2a1",
+      "characters": 824,
       "validation_issues": [],
       "sources": [],
+      "generation": {
+        "method": "google_docs_tts"
+      },
       "audio": {
         "mp3": {
-          "duration_seconds": 33.024,
-          "bytes": 264192,
-          "sha256": "2c9c95684dd2044677a3048e306d69debe089d83cdd097c1f837e5b2fab5321a",
+          "duration_seconds": 45.936,
+          "bytes": 367488,
+          "sha256": "9679f5fce703ec83bfff49faa181f3d7b7d95af0c29e5b7d0cf203f6ee58d081",
           "codec_name": "mp3",
           "sample_rate": "24000",
           "channels": 1
         },
         "ogg": {
-          "duration_seconds": 33.0305,
-          "bytes": 274031,
-          "sha256": "63e659a94c7c80cd79cb37b873479020f6cdcf5f370cc4d9fb5ee6e8e5082124",
+          "duration_seconds": 45.9425,
+          "bytes": 379724,
+          "sha256": "4b3e54555316aa9f68e9fa3916f4ddd76089c0bb30478e72eefc4433283d89e2",
           "codec_name": "opus",
           "sample_rate": "48000",
           "channels": 1
@@ -34,6 +40,7 @@
     },
     {
       "stem": "01_expiation_of_sins",
+      "title": "ഒന്നാം അധ്യായം: രണ്ട് ഉംറകൾക്കിടയിലെ പാപമോചനം.",
       "text_sha256": "443580734caf08512fc180a6a1c488028e3300861750492669c8434219908bb1",
       "characters": 438,
       "validation_issues": [],
@@ -51,6 +58,10 @@
           "url": "https://sunnah.com/muslim:1349a"
         }
       ],
+      "generation": {
+        "method": "reused_verified",
+        "previous_render_sha256": "7667dba690fa42c538aad1551beeca50c5d826a8cb14791372a7fa30cd109cb5"
+      },
       "audio": {
         "mp3": {
           "duration_seconds": 27.36,
@@ -63,7 +74,7 @@
         "ogg": {
           "duration_seconds": 27.3665,
           "bytes": 226668,
-          "sha256": "c671efd817f7ec9918c204a89fcb27b77047cbb0105fb10ae6742b7e35240051",
+          "sha256": "d08582c90388b3b28c78a9cc91b233213660767b837837fb8ca2ca6ad7faf4e9",
           "codec_name": "opus",
           "sample_rate": "48000",
           "channels": 1
@@ -72,6 +83,7 @@
     },
     {
       "stem": "02_removal_of_poverty",
+      "title": "രണ്ടാം അധ്യായം: ഹജ്ജും ഉംറയും തുടർച്ചയായി നിർവ്വഹിക്കുന്നത് ദാരിദ്ര്യത്തെയും പാപങ്ങളെയും അകറ്റുന്നു.",
       "text_sha256": "782545b702b6fd82d2f091eef67c50602304be164cf4aa58e114440cb55bdb9d",
       "characters": 773,
       "validation_issues": [],
@@ -95,6 +107,10 @@
           "url": "https://sunnah.com/ibnmajah:2887"
         }
       ],
+      "generation": {
+        "method": "reused_verified",
+        "previous_render_sha256": "7667dba690fa42c538aad1551beeca50c5d826a8cb14791372a7fa30cd109cb5"
+      },
       "audio": {
         "mp3": {
           "duration_seconds": 42.552,
@@ -107,7 +123,7 @@
         "ogg": {
           "duration_seconds": 42.5585,
           "bytes": 353680,
-          "sha256": "9cd64e58f68b38262c8074315a43644cd5d895a6ed76f768265d8048db77b837",
+          "sha256": "17c0ebf523998a82bd925618c3531229e74db545f3509109857bb8a9f015c108",
           "codec_name": "opus",
           "sample_rate": "48000",
           "channels": 1
@@ -116,6 +132,7 @@
     },
     {
       "stem": "03_umrah_in_ramadan",
+      "title": "മൂന്നാം അധ്യായം: റമദാൻ മാസത്തിലെ ഉംറ.",
       "text_sha256": "9ef61047862590a81f5ddceb669e48d67364d57b837ad223ed77f49b17aea047",
       "characters": 871,
       "validation_issues": [],
@@ -145,6 +162,10 @@
           "url": "https://sunnah.com/tirmidhi:939"
         }
       ],
+      "generation": {
+        "method": "reused_verified",
+        "previous_render_sha256": "7667dba690fa42c538aad1551beeca50c5d826a8cb14791372a7fa30cd109cb5"
+      },
       "audio": {
         "mp3": {
           "duration_seconds": 47.136,
@@ -157,7 +178,7 @@
         "ogg": {
           "duration_seconds": 47.1425,
           "bytes": 389400,
-          "sha256": "f6cf0a5cf74f8b3138298bf5919d95782bc55ecca9fcf356d4d5d9669c87bea2",
+          "sha256": "4fdacb9dc5c84754fe22da8b22bd3b3527a5f407c967db24ecd5f80eba3d0ce9",
           "codec_name": "opus",
           "sample_rate": "48000",
           "channels": 1
@@ -166,6 +187,7 @@
     },
     {
       "stem": "04_guests_of_allah",
+      "title": "നാലാം അധ്യായം: ഉംറ നിർവ്വഹിക്കുന്നവർ അല്ലാഹുവിന്റെ വിശിഷ്ട അതിഥികളാണ്.",
       "text_sha256": "c7f60c60f3dd390f54d6806c19772eabfe7aa3e19dafe1e002dedb1bf6f6ca2a",
       "characters": 744,
       "validation_issues": [],
@@ -183,6 +205,10 @@
           "url": "https://sunnah.com/nasai:2625"
         }
       ],
+      "generation": {
+        "method": "reused_verified",
+        "previous_render_sha256": "7667dba690fa42c538aad1551beeca50c5d826a8cb14791372a7fa30cd109cb5"
+      },
       "audio": {
         "mp3": {
           "duration_seconds": 44.52,
@@ -195,7 +221,7 @@
         "ogg": {
           "duration_seconds": 44.5265,
           "bytes": 365772,
-          "sha256": "c2bfa388823228c4205f714e81ea1a6e48dfb162a32cd460f0b86f16a9dabdbc",
+          "sha256": "649d46f2b7b0aa1550f5ba042e3ead3dcc0df61a37190c5b01575729e8af8d55",
           "codec_name": "opus",
           "sample_rate": "48000",
           "channels": 1
@@ -204,6 +230,7 @@
     },
     {
       "stem": "05_jihad_of_women",
+      "title": "അഞ്ചാം അധ്യായം: സ്ത്രീകളുടെയും ദുർബലരുടെയും ജിഹാദ്.",
       "text_sha256": "06e246cd14689e9fe0565de9546629fd348d7b0b10cefb64a359e92f14b51b1f",
       "characters": 795,
       "validation_issues": [],
@@ -227,6 +254,10 @@
           "url": "https://sunnah.com/nasai:2626"
         }
       ],
+      "generation": {
+        "method": "reused_verified",
+        "previous_render_sha256": "7667dba690fa42c538aad1551beeca50c5d826a8cb14791372a7fa30cd109cb5"
+      },
       "audio": {
         "mp3": {
           "duration_seconds": 47.496,
@@ -239,7 +270,7 @@
         "ogg": {
           "duration_seconds": 47.5025,
           "bytes": 391396,
-          "sha256": "f78395785525bf0d6fabcc46605b55485792910b3e220d1d87bb4305fe630bf7",
+          "sha256": "b1e77da9a80bd47dc4cef2712b695dcffd7e22a89a645ad5b1d8feff040b6e04",
           "codec_name": "opus",
           "sample_rate": "48000",
           "channels": 1
@@ -248,6 +279,7 @@
     },
     {
       "stem": "06_reward_by_hardship",
+      "title": "ആറാം അധ്യായം: അധ്വാനത്തിനും ചെലവിനും അനുസരിച്ചുള്ള പ്രതിഫലം.",
       "text_sha256": "4d2a0695643d8ca6732a9669b5298d775a77617a7f358a246626bafdb22510c9",
       "characters": 694,
       "validation_issues": [],
@@ -265,6 +297,10 @@
           "url": "https://sunnah.com/ibnmajah:3000"
         }
       ],
+      "generation": {
+        "method": "reused_verified",
+        "previous_render_sha256": "7667dba690fa42c538aad1551beeca50c5d826a8cb14791372a7fa30cd109cb5"
+      },
       "audio": {
         "mp3": {
           "duration_seconds": 39.552,
@@ -277,7 +313,7 @@
         "ogg": {
           "duration_seconds": 39.5585,
           "bytes": 326744,
-          "sha256": "5059e33c8787e77dc0770006362dee7f061d68e01a5e539ed54b4246cf71a9a2",
+          "sha256": "ff5139d33cce65384d2c390427d77b27ff1fb1b35535b46a3fa17a14d9614b90",
           "codec_name": "opus",
           "sample_rate": "48000",
           "channels": 1
@@ -286,6 +322,7 @@
     },
     {
       "stem": "07_virtues_of_tawaf",
+      "title": "ഏഴാം അധ്യായം: ത്വവാഫിന്റെയും കഅ്ബയുടെ വിശുദ്ധ ഭാഗങ്ങൾ സ്പർശിക്കുന്നതിന്റെയും ശ്രേഷ്ഠതകൾ.",
       "text_sha256": "7937ac4a4fd9a2f45ac938009a00dd08cb3deca0d6d6870a1cbd03d85e60b024",
       "characters": 787,
       "validation_issues": [],
@@ -303,6 +340,10 @@
           "url": "https://sunnah.com/nasai:2919"
         }
       ],
+      "generation": {
+        "method": "reused_verified",
+        "previous_render_sha256": "7667dba690fa42c538aad1551beeca50c5d826a8cb14791372a7fa30cd109cb5"
+      },
       "audio": {
         "mp3": {
           "duration_seconds": 42.144,
@@ -315,7 +356,7 @@
         "ogg": {
           "duration_seconds": 42.1505,
           "bytes": 347403,
-          "sha256": "b9f7540fca636d1cbe81c3064ef716b648154dc4ac815d326f199daa5506d9d8",
+          "sha256": "e8b867424f5c98da77d26acc7765059678ed5d4a87518e521b9e012ac523e817",
           "codec_name": "opus",
           "sample_rate": "48000",
           "channels": 1
@@ -324,6 +365,7 @@
     },
     {
       "stem": "08_supplication_return",
+      "title": "എട്ടാം അധ്യായം: ഉംറ കഴിഞ്ഞുള്ള മടക്കയാത്രയിലെ പ്രാർത്ഥനയും ശ്രേഷ്ഠതയും.",
       "text_sha256": "757cde4d04f2f2f160aca7a9a00519637c883b455bbddf3a98b369ff2a85cd21",
       "characters": 1766,
       "validation_issues": [],
@@ -341,6 +383,10 @@
           "url": "https://sunnah.com/muslim:1342"
         }
       ],
+      "generation": {
+        "method": "reused_verified",
+        "previous_render_sha256": "7667dba690fa42c538aad1551beeca50c5d826a8cb14791372a7fa30cd109cb5"
+      },
       "audio": {
         "mp3": {
           "duration_seconds": 100.968,
@@ -353,7 +399,649 @@
         "ogg": {
           "duration_seconds": 100.9745,
           "bytes": 825049,
-          "sha256": "8230cb2b42e73326dea3773320186a23b75155a1c7b817617e19e46c7a4ceb80",
+          "sha256": "cf04530b547e113f91a526f156c523e864660b48d9d5202265e44637df4ff1de",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "10_talbiyah",
+      "title": "ഒൻപതാം അധ്യായം: തൽബിയത്തിന്റെ മഹത്വം.",
+      "text_sha256": "fe74d1107ebb66d4509d9e7e44f07e5e97ecd23f3470b9c4a8936709f85e3985",
+      "characters": 513,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "ibnmajah:2921",
+          "reference": "Sunan Ibn Majah 2921",
+          "grade_as_stored": "Sahih (Darussalam)",
+          "url": "https://sunnah.com/ibnmajah:2921",
+          "usage": "meaning_summary",
+          "grade_verified": "Hasan (Darussalam)",
+          "url_verified": "https://sunnah.com/ibnmajah:2921",
+          "note": "Stored Sahih label differs from page; Arabic madar rendered as mud/clods, not cosmic or scientific terminology."
+        },
+        {
+          "id": "tirmidhi:828",
+          "reference": "Jami` at-Tirmidhi 828",
+          "grade_as_stored": "Sahih (Darussalam)",
+          "url": "https://sunnah.com/tirmidhi:828",
+          "usage": "meaning_summary",
+          "grade_verified": "Hasan (Darussalam)",
+          "url_verified": "https://sunnah.com/tirmidhi:828",
+          "note": "Stored Sahih label differs from page."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 29.256,
+          "bytes": 234048,
+          "sha256": "5f316906523bc329c88388df9c7f35154ef26eb08394ffcf2b44e68629d671ce",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 29.2625,
+          "bytes": 241575,
+          "sha256": "2adc4d17f98367680a12bb9c58c41e158560ed2e43e62aeb2f86b3672c13b728",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "11_resurrection_in_ihram",
+      "title": "പത്താം അധ്യായം: ഇഹ്‌റാമിലിരിക്കെ മരിച്ച തീർത്ഥാടകൻ തൽബിയത്ത് ചൊല്ലിക്കൊണ്ട് ഉയിർത്തെഴുന്നേൽക്കുന്നത്.",
+      "text_sha256": "045180c4fcc8de4fc9d475f1a67c0c4a3e5384c2396b0bf689c5b0a0fa628e4c",
+      "characters": 790,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "bukhari:1265",
+          "reference": "Sahih al-Bukhari 1265",
+          "grade_as_stored": "Sahih (Sahih al-Bukhari - Authentic)",
+          "url": "https://sunnah.com/bukhari:1265",
+          "usage": "meaning_summary",
+          "grade_verified": "Sahih al-Bukhari",
+          "url_verified": "https://sunnah.com/bukhari:1265",
+          "note": "Event occurred at Arafat. No claim of perpetual reward for everyone dying on an Umrah journey."
+        },
+        {
+          "id": "muslim:1206a",
+          "reference": "Sahih Muslim 1206 a",
+          "grade_as_stored": "Sahih (Sahih Muslim - Authentic)",
+          "url": "https://sunnah.com/muslim:1206a",
+          "usage": "meaning_summary",
+          "grade_verified": "Sahih Muslim",
+          "url_verified": "https://sunnah.com/muslim:1206a",
+          "note": "Uses this variant's actual wording, not the stored composite quotation."
+        },
+        {
+          "id": "sahih-targhib:1114",
+          "reference": "Sahih al-Targhib 1114 (Musnad Abi Ya'la)",
+          "grade_as_stored": "Sahih (Al-Albani)",
+          "url": "https://sunnah.com",
+          "usage": "excluded_unverified",
+          "note": "Only a Sunnah.com homepage link supplied; primary reference and grade not independently verified. Perpetual-reward claim omitted."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 43.536,
+          "bytes": 348288,
+          "sha256": "e86599c2844756422cca7634096623a2837740e80acd4176fbb7db83b4d1d6f7",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 43.5425,
+          "bytes": 355903,
+          "sha256": "83837371e0546c249700e4e754f71ebe416a713bcf0ff21edca8b3926500f024",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "12_pilgrim_supplication",
+      "title": "പതിനൊന്നാം അധ്യായം: ഉംറ തീർത്ഥാടകന്റെ പ്രാർത്ഥനയിൽ ഉൾപ്പെടുത്താൻ ആവശ്യപ്പെടുന്നതിനെക്കുറിച്ചുള്ള നിവേദനം.",
+      "text_sha256": "21788a784d5020e44d8472a94a2c20a2b2595001dcad1b3b74ee7dd10f96efa0",
+      "characters": 809,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "tirmidhi:3562",
+          "reference": "Jami` at-Tirmidhi 3562",
+          "grade_as_stored": "Hasan (Darussalam)",
+          "url": "https://sunnah.com/tirmidhi:3562",
+          "usage": "qualified_report",
+          "grade_verified": "Da'if (Darussalam); al-Tirmidhi says Hasan Sahih",
+          "url_verified": "https://sunnah.com/tirmidhi:3562",
+          "note": "Conflicting assessments explicitly narrated; not presented as undisputed authentic."
+        },
+        {
+          "id": "abudawud:1498",
+          "reference": "Sunan Abi Dawud 1498",
+          "grade_as_stored": "Sahih / Hasan (Al-Albani)",
+          "url": "https://sunnah.com/abudawud:1498",
+          "usage": "qualified_report",
+          "grade_verified": "Da'if (Al-Albani)",
+          "url_verified": "https://sunnah.com/abudawud:1498",
+          "note": "Stored Sahih / Hasan label differs from page."
+        },
+        {
+          "id": "riyadussalihin:713",
+          "reference": "Riyad as-Salihin 713",
+          "grade_as_stored": "Authentic (Riyad as-Salihin)",
+          "url": "https://sunnah.com/riyadussalihin:713",
+          "usage": "qualified_report",
+          "grade_verified": "No separate grade table; quotes Abu Dawud and al-Tirmidhi",
+          "url_verified": "https://sunnah.com/riyadussalihin:713",
+          "note": "Inclusion in Riyad as-Salihin does not establish a separate authentic chain."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 45.528,
+          "bytes": 364224,
+          "sha256": "af2325c24fa3571349b8ca31e25b8ba38bad65fa52e525a880443790e5cab81e",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 45.5345,
+          "bytes": 375357,
+          "sha256": "c6bfbd53d41730fba314219f46a5821a7d07cb8d0332a4b528b8087cee947772",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "13_shaving_head",
+      "title": "പന്ത്രണ്ടാം അധ്യായം: തലമുടി മുണ്ഡനം ചെയ്യുന്നവർക്കും മുടി ചുരുക്കുന്നവർക്കും വേണ്ടിയുള്ള നബിയുടെ പ്രാർത്ഥന.",
+      "text_sha256": "7f917e238a78d825b7fd3693111b273e88da72ae8fd72558dbb75f7e34fe5077",
+      "characters": 833,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "bukhari:1727",
+          "reference": "Sahih al-Bukhari 1727",
+          "grade_as_stored": "Sahih (Sahih al-Bukhari - Authentic)",
+          "url": "https://sunnah.com/bukhari:1727",
+          "usage": "meaning_summary",
+          "grade_verified": "Sahih al-Bukhari",
+          "url_verified": "https://sunnah.com/bukhari:1727",
+          "note": "Mercy prayer; variant counts not flattened into one universal count."
+        },
+        {
+          "id": "bukhari:1728",
+          "reference": "Sahih al-Bukhari 1728",
+          "grade_as_stored": "Sahih (Sahih al-Bukhari - Authentic)",
+          "url": "https://sunnah.com/bukhari:1728",
+          "usage": "meaning_summary",
+          "grade_verified": "Sahih al-Bukhari",
+          "url_verified": "https://sunnah.com/bukhari:1728",
+          "note": "Arabic explicitly repeats forgiveness prayer three times."
+        },
+        {
+          "id": "muslim:1301",
+          "reference": "Sahih Muslim 1301",
+          "grade_as_stored": "Sahih (Sahih Muslim - Authentic)",
+          "url": "https://sunnah.com/muslim:1301",
+          "usage": "meaning_summary",
+          "grade_verified": "Sahih Muslim",
+          "url_verified": "https://sunnah.com/muslim:1301a",
+          "note": "Page resolves to 1301a and says once or twice, not the stored threefold composite wording."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 45.096,
+          "bytes": 360768,
+          "sha256": "edb407b8e1100efa481d1f0b318277380ec553ee79837296eb6880bdc97a8b33",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 45.1025,
+          "bytes": 371555,
+          "sha256": "5589fae238e08b1f217921adb0abc40a6a6d364635abde0d6982e1a2e09a7ab8",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "14_tawaf_and_sai",
+      "title": "പതിമൂന്നാം അധ്യായം: ത്വവാഫിന്റെയും അതിനുശേഷമുള്ള നമസ്കാരത്തിന്റെയും പ്രതിഫലം.",
+      "text_sha256": "aa11266f3e3b953cff13400905a0a4ffa87b501c5c385f59e20d8074395a3824",
+      "characters": 744,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "ibnmajah:2956",
+          "reference": "Sunan Ibn Majah 2956",
+          "grade_as_stored": "Sahih (Darussalam)",
+          "url": "https://sunnah.com/ibnmajah:2956",
+          "usage": "meaning_summary",
+          "grade_verified": "Hasan (Darussalam)",
+          "url_verified": "https://sunnah.com/ibnmajah:2956",
+          "note": "Actual page says tawaf AND two rak'ahs. Stored Arabic, English and Sahih label do not match the cited page. Seven circuits/steps belong to the earlier Tirmidhi report."
+        },
+        {
+          "id": "tabarani:1112",
+          "reference": "Al-Mu'jam al-Kabir / Sahih al-Targhib 1112",
+          "grade_as_stored": "Hasan (Al-Albani)",
+          "url": "https://sunnah.com",
+          "usage": "excluded_unverified",
+          "note": "Only a homepage link supplied; primary reference/grade not verified. Seventy-slaves reward for sa'i omitted as evidence."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 40.968,
+          "bytes": 327744,
+          "sha256": "757f4d0f90824d91eae98b4dd175fe6530bb18dc4176242643a37f5415c1ac6f",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 40.9745,
+          "bytes": 349426,
+          "sha256": "f9153c8816034f4d246e413b4aa61ec9e3f9397079f27b912e4d7c2f4a1d9e55",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "15_aqsa_ihram_review",
+      "title": "പതിനാലാം അധ്യായം: മസ്ജിദുൽ അഖ്‌സയിൽനിന്ന് ഇഹ്‌റാം ആരംഭിക്കുന്നതിനെക്കുറിച്ചുള്ള ദുർബല നിവേദനങ്ങൾ.",
+      "text_sha256": "413b5820cbe3cf5c53eb37465be74f1ff8f811a2e0431eada73ec5edcf05d82c",
+      "characters": 742,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "abudawud:1741",
+          "reference": "Sunan Abi Dawud 1741",
+          "grade_as_stored": "Da'if / Sound for Virtues (Sunan Abi Dawud)",
+          "url": "https://sunnah.com/abudawud:1741",
+          "usage": "qualified_report",
+          "grade_verified": "Da'if (Al-Albani)",
+          "url_verified": "https://sunnah.com/abudawud:1741",
+          "note": "Weakness and narrator's uncertainty between forgiveness and Paradise explicitly stated; no 'sound for virtues' assertion."
+        },
+        {
+          "id": "ibnmajah:3001",
+          "reference": "Sunan Ibn Majah 3001",
+          "grade_as_stored": "Da'if / Sound for Virtues (Sunan Ibn Majah)",
+          "url": "https://sunnah.com/ibnmajah:3001",
+          "usage": "qualified_report",
+          "grade_verified": "Da'if (Darussalam)",
+          "url_verified": "https://sunnah.com/ibnmajah:3001",
+          "note": "Actual page says forgiven, not the stored expanded wording about previous sins."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 44.376,
+          "bytes": 355008,
+          "sha256": "679163c44a90174f6b0a41c993aeb13edb4f2f7b0640a249a947d1784f2d3d9a",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 44.3825,
+          "bytes": 365654,
+          "sha256": "a75b10d03fcfdbbe5e697b531b2a0d957e425925c63c6842a9b416fa01dd6aa7",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "16_black_stone",
+      "title": "പതിനഞ്ചാം അധ്യായം: ഹജറുൽ അസ്‌വദിന്റെ ഉത്ഭവവും സാക്ഷ്യവും.",
+      "text_sha256": "dffa1e774294ddf241f514f437a5750bf2895f562d60442f08ceb91608133dd9",
+      "characters": 726,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "tirmidhi:877",
+          "reference": "Jami` at-Tirmidhi 877",
+          "grade_as_stored": "Sahih (Darussalam)",
+          "url": "https://sunnah.com/tirmidhi:877",
+          "usage": "meaning_summary",
+          "grade_verified": "Hasan (Darussalam); al-Tirmidhi says Hasan Sahih",
+          "url_verified": "https://sunnah.com/tirmidhi:877",
+          "note": "Stored Sahih label differs from page."
+        },
+        {
+          "id": "tirmidhi:961",
+          "reference": "Jami` at-Tirmidhi 961",
+          "grade_as_stored": "Sahih (Darussalam)",
+          "url": "https://sunnah.com/tirmidhi:961",
+          "usage": "meaning_summary",
+          "grade_verified": "Hasan (Darussalam)",
+          "url_verified": "https://sunnah.com/tirmidhi:961",
+          "note": "Stored Sahih label differs from page."
+        },
+        {
+          "id": "ibnmajah:2944",
+          "reference": "Sunan Ibn Majah 2944",
+          "grade_as_stored": "Sahih (Darussalam)",
+          "url": "https://sunnah.com/ibnmajah:2944",
+          "usage": "meaning_summary",
+          "grade_verified": "Hasan (Darussalam)",
+          "url_verified": "https://sunnah.com/ibnmajah:2944",
+          "note": "Stored Sahih label differs from page."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 42.168,
+          "bytes": 337344,
+          "sha256": "44141c4d43e08140d4ce36532ebc58d2bb30f3035159f08cbb4331116cde0c00",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 42.1745,
+          "bytes": 346034,
+          "sha256": "139efecca0cdb11ddd76802c55314a9f4b36af3aa18efdbbcaf82b3cb54fd45a",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "17_zamzam",
+      "title": "പതിനാറാം അധ്യായം: സംസം വെള്ളത്തിന്റെ അനുഗ്രഹം.",
+      "text_sha256": "8c132410bfe049fcbf07fb9155808d9254f9b567fdecd06d04a3f96cd5022e26",
+      "characters": 588,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "ibnmajah:3062",
+          "reference": "Sunan Ibn Majah 3062",
+          "grade_as_stored": "Hasan (Darussalam)",
+          "url": "https://sunnah.com/ibnmajah:3062",
+          "usage": "meaning_summary",
+          "grade_verified": "Hasan (Darussalam)",
+          "url_verified": "https://sunnah.com/ibnmajah:3062",
+          "note": "Retains purpose-for-drinking wording without adding medical guarantees."
+        },
+        {
+          "id": "muslim:2473",
+          "reference": "Sahih Muslim 2473",
+          "grade_as_stored": "Sahih (Sahih Muslim - Authentic)",
+          "url": "https://sunnah.com/muslim:2473",
+          "usage": "meaning_summary",
+          "grade_verified": "Sahih Muslim",
+          "url_verified": "https://sunnah.com/muslim:2473a",
+          "note": "Narrates blessing and nourishment only. Cure addition is not part of this Muslim narration."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 34.752,
+          "bytes": 278016,
+          "sha256": "0865f2ff3f6f0f2867e95392f748e072c4fc6caf6ca54b202abc6a6c48d1a316",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 34.7585,
+          "bytes": 288256,
+          "sha256": "a578209506d8b05a92345fdd9dd525f7daec7c0248f3e62df7f983c957f1c3a7",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "18_sacred_mosque_prayer",
+      "title": "പതിനേഴാം അധ്യായം: മസ്ജിദുൽ ഹറാമിലെ നമസ്കാരത്തിന്റെ മഹത്തായ പ്രതിഫലം.",
+      "text_sha256": "27adef90c9d6cab2fbd9532bd16f6502e455738c60ef289fe1222063d5be7637",
+      "characters": 619,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "ibnmajah:1406",
+          "reference": "Sunan Ibn Majah 1406",
+          "grade_as_stored": "Sahih (Darussalam)",
+          "url": "https://sunnah.com/ibnmajah:1406",
+          "usage": "meaning_summary",
+          "grade_verified": "Sahih (Darussalam)",
+          "url_verified": "https://sunnah.com/ibnmajah:1406",
+          "note": "Narrator on page is Jabir. 'Better than one hundred thousand', not exactly equal or restricted to Umrah pilgrims."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 35.328,
+          "bytes": 282624,
+          "sha256": "158486e95be06bda2e46bc9b28ac87f53d1cb23f5744a616bd243fbf7426c65c",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 35.3345,
+          "bytes": 291881,
+          "sha256": "6f455507ee1865cef0552f7043cb818f524de91939a5993c6e038e43722b70bc",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "19_prophets_umrahs",
+      "title": "പതിനെട്ടാം അധ്യായം: നബി നിർവഹിച്ച നാല് ഉംറകൾ.",
+      "text_sha256": "358bd1eea8391dce317020993aec9cb7486add3c185f77991222205f7d89524b",
+      "characters": 687,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "bukhari:1778",
+          "reference": "Sahih al-Bukhari 1778",
+          "grade_as_stored": "Sahih (Sahih al-Bukhari - Authentic)",
+          "url": "https://sunnah.com/bukhari:1778",
+          "usage": "meaning_summary",
+          "grade_verified": "Sahih al-Bukhari",
+          "url_verified": "https://sunnah.com/bukhari:1778",
+          "note": "Four Umrahs; blocked Hudaybiyah counted. Does not falsely say all four completed in Dhu al-Qa'dah."
+        },
+        {
+          "id": "muslim:1253a",
+          "reference": "Sahih Muslim 1253 a",
+          "grade_as_stored": "Sahih (Sahih Muslim - Authentic)",
+          "url": "https://sunnah.com/muslim:1253a",
+          "usage": "meaning_summary",
+          "grade_verified": "Sahih Muslim",
+          "url_verified": "https://sunnah.com/muslim:1253a",
+          "note": "Actual variant states one Hajj and four Umrahs; no expanded itinerary attributed to this variant."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 40.584,
+          "bytes": 324672,
+          "sha256": "182b2763a5300b7a26f2dc648775e3baa0d5dc61b0fa2c38894c49aec7159061",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 40.5905,
+          "bytes": 340910,
+          "sha256": "363ff6bb4b14801ac7a9a0196c964a59b3f413dc8776543d204fc875b451eb78",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "20_pilgrimage_spending_review",
+      "title": "പത്തൊൻപതാം അധ്യായം: തീർത്ഥാടനച്ചെലവിന്റെ പ്രതിഫലത്തെക്കുറിച്ചുള്ള ഉറവിടപരിശോധന.",
+      "text_sha256": "983ce47cd7d4f8a7b4700d5992e4047fb46aff806b35f62e1395535a48bf2f57",
+      "characters": 581,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "ahmad:23000",
+          "reference": "Musnad Ahmad 23000 (Shu'ab al-Iman 3822)",
+          "grade_as_stored": "Hasan li-ghayrihi (Musnad Ahmad)",
+          "url": "https://sunnah.com",
+          "usage": "excluded_unverified",
+          "note": "Primary number and grade not independently verified. Seven-hundred multiplier omitted as evidence; stored Arabic names Hajj, not Hajj and Umrah."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 32.352,
+          "bytes": 258816,
+          "sha256": "258ebdb534aa58415325058d126e09e72412e06355c93cf83ad6b60165c663f0",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 32.3585,
+          "bytes": 266365,
+          "sha256": "2657438729816982be7241dc1c9d46b5858fb3d677e935cc2ba6e1d760210c6b",
+          "codec_name": "opus",
+          "sample_rate": "48000",
+          "channels": 1
+        }
+      }
+    },
+    {
+      "stem": "21_equivalent_deeds",
+      "title": "ഇരുപതാം അധ്യായം: ഉംറയുടെ പ്രതിഫലത്തോട് ഉപമിച്ച സൽകർമ്മങ്ങൾ.",
+      "text_sha256": "6390060ac102aa8e2f7076a8765d6f01c119537ba5b87c14bdebc48f70d133f5",
+      "characters": 1519,
+      "validation_issues": [],
+      "sources": [
+        {
+          "id": "ibnmajah:1412",
+          "reference": "Sunan Ibn Majah 1412",
+          "grade_as_stored": "Sahih (Darussalam)",
+          "url": "https://sunnah.com/ibnmajah:1412",
+          "usage": "meaning_summary",
+          "grade_verified": "Hasan (Darussalam)",
+          "url_verified": "https://sunnah.com/ibnmajah:1412",
+          "note": "Stored Sahih label differs from page. Preserves purification at home, visiting Quba, and prayer."
+        },
+        {
+          "id": "tirmidhi:324",
+          "reference": "Jami` at-Tirmidhi 324",
+          "grade_as_stored": "Hasan (Darussalam)",
+          "url": "https://sunnah.com/tirmidhi:324",
+          "usage": "meaning_summary",
+          "grade_verified": "Hasan (Darussalam)",
+          "url_verified": "https://sunnah.com/tirmidhi:324",
+          "note": "Reward comparison, not actual discharge of pilgrimage."
+        },
+        {
+          "id": "tirmidhi:586",
+          "reference": "Jami` at-Tirmidhi 586",
+          "grade_as_stored": "Hasan (Darussalam)",
+          "url": "https://sunnah.com/tirmidhi:586",
+          "usage": "qualified_report",
+          "grade_verified": "Da'if (Darussalam); al-Tirmidhi says Hasan Gharib",
+          "url_verified": "https://sunnah.com/tirmidhi:586",
+          "note": "Stored Hasan (Darussalam) differs from page; competing assessments explicitly narrated."
+        },
+        {
+          "id": "abudawud:558",
+          "reference": "Sunan Abi Dawud 558",
+          "grade_as_stored": "Hasan (Al-Albani)",
+          "url": "https://sunnah.com/abudawud:558",
+          "usage": "meaning_summary",
+          "grade_verified": "Hasan (Al-Albani)",
+          "url_verified": "https://sunnah.com/abudawud:558",
+          "note": "Thematic excerpt retains purification, obligatory prayer, and going out solely for Duha. Not claimed to be the complete report."
+        },
+        {
+          "id": "tabarani:7473",
+          "reference": "Al-Mu'jam al-Kabir 7473 / Sahih al-Targhib 86",
+          "grade_as_stored": "Sahih (Al-Albani)",
+          "url": "https://sunnah.com",
+          "usage": "excluded_unverified",
+          "note": "Primary reference not independently verified. Stored Arabic mentions Hajj only; unsupported Umrah addition in English omitted."
+        }
+      ],
+      "generation": {
+        "method": "google_docs_tts"
+      },
+      "audio": {
+        "mp3": {
+          "duration_seconds": 82.536,
+          "bytes": 660288,
+          "sha256": "f289332a6f8245baa2e99d48df198f55dbcdff563f930be3065dd43a1dccbdba",
+          "codec_name": "mp3",
+          "sample_rate": "24000",
+          "channels": 1
+        },
+        "ogg": {
+          "duration_seconds": 82.5425,
+          "bytes": 680329,
+          "sha256": "081dc12837d4e77a38c863cc14a3412432d2e32d9bf679664b729290c71f42ce",
           "codec_name": "opus",
           "sample_rate": "48000",
           "channels": 1
@@ -362,10 +1050,15 @@
     },
     {
       "stem": "09_conclusion",
+      "title": "ഉപസംഹാരം: അല്ലാഹുവിന്റെ വിശുദ്ധ ഭവനത്തെ ലക്ഷ്യമാക്കി നിർവ്വഹിക്കുന്ന ഉംറ വലിയ പ്രതിഫലങ്ങൾ നിറഞ്ഞ പുണ്യകർമ്മമാണ്.",
       "text_sha256": "81b69df374c5b0e186dec4f09bad7ae9b0ea34e918455db7af4d5930ebc1f293",
       "characters": 433,
       "validation_issues": [],
       "sources": [],
+      "generation": {
+        "method": "reused_verified",
+        "previous_render_sha256": "7667dba690fa42c538aad1551beeca50c5d826a8cb14791372a7fa30cd109cb5"
+      },
       "audio": {
         "mp3": {
           "duration_seconds": 24.912,
@@ -378,7 +1071,7 @@
         "ogg": {
           "duration_seconds": 24.9185,
           "bytes": 204996,
-          "sha256": "b31cab944700f586e7a6da72446336f4cf2e745502fd6e0fb8df1f35fdfb3dbf",
+          "sha256": "f460a0852f659f78d03deaa17df5be547cec2eb4bee78f91e8d60ab9763b2c99",
           "codec_name": "opus",
           "sample_rate": "48000",
           "channels": 1
@@ -388,17 +1081,17 @@
   ],
   "full_audio": {
     "mp3": {
-      "duration_seconds": 449.664,
-      "bytes": 3597549,
-      "sha256": "1bfe29b7c4b35e0966f72546fe2ec1ce3c38f3fd32411747ad048bb6f61347a2",
+      "duration_seconds": 979.056,
+      "bytes": 7832685,
+      "sha256": "06e9401e0fc35edc609b4d198cd0ae61eb505d7c032c810183c46767ae8563ac",
       "codec_name": "mp3",
       "sample_rate": "24000",
       "channels": 1
     },
     "ogg": {
-      "duration_seconds": 449.648458,
-      "bytes": 3686116,
-      "sha256": "89e397004d12cc9c82efbc114e30ea91ef88362878ec196279fabd913fee3e0c",
+      "duration_seconds": 979.040458,
+      "bytes": 8035609,
+      "sha256": "078ba404e46552e161c6c9db2b39116928208842f024e4912ef9ec647c160e55",
       "codec_name": "opus",
       "sample_rate": "48000",
       "channels": 1
